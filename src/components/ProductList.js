@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux"
 
 export const ProductList = () => {
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
 
   const list = [{ id: 123, name: "양말", cost: 13 }]
 

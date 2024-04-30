@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux"
 
 export const ProductForm = () => {
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
 
   const name = ""
   const cost = 0

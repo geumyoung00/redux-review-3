@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux"
 
 export const ProductSearch = () => {
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
 
   const handleChange = () => {}
 
