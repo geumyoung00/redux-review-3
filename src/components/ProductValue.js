@@ -1,3 +1,9 @@
 export const ProductValue = () => {
-	return <div>Product Value</div>;
+	const totalCost = 10;
+
+	return (
+		<div className="product-value">
+			총 가격: $<strong>{totalCost}</strong>
+		</div>
+	);
 };

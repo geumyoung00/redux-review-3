@@ -5,10 +5,11 @@ import { ProductValue } from './components/ProductValue';
 
 function App() {
 	return (
-		<div>
+		<div className="container is-fluid p-5">
+			<h2 className="title is-2">세관 신고서</h2>
 			<ProductForm />
-			<ProductList />
 			<ProductSearch />
+			<ProductList />
 			<ProductValue />
 		</div>
 	);
