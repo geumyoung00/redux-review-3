@@ -1,16 +1,21 @@
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import { costChange, nameChange } from "../store"
+import { addItem } from "../store/slieces/productSlice"
 
 export const ProductForm = () => {
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
-  const name = ""
-  const cost = 0
+  const name = useSelector((state) => state.form.name)
+  const cost = useSelector((state) => state.form.cost)
 
-  const handleNameChange = () => {}
+  const handleNameChange = (e) => dispatch(nameChange(e.target.value))
 
-  const handleCostChange = () => {}
+  const handleCostChange = (e) => dispatch(costChange(e.target.value))
 
-  const handleSubmit = () => {}
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    dispatch(addItem({ name, cost }))
+  }
 
   return (
     <div className="product-form panel">

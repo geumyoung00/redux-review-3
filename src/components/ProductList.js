@@ -1,9 +1,10 @@
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 
 export const ProductList = () => {
   // const dispatch = useDispatch()
 
-  const list = [{ id: 123, name: "양말", cost: 13 }]
+  // const list = [{ id: 123, name: "양말", cost: 13 }]
+  const list = useSelector((state) => state.product.list)
 
   const handleRemove = () => {}
 
