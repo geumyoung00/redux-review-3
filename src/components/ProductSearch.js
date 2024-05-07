@@ -1,9 +1,10 @@
 import { useDispatch } from "react-redux"
+import { searchTermChange } from "../store"
 
 export const ProductSearch = () => {
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
-  const handleChange = () => {}
+  const handleChange = (e) => dispatch(searchTermChange(e.target.value))
 
   return (
     <div className="list-header">

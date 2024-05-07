@@ -8,10 +8,10 @@ const productSlice = createSlice({
       state.list.push({ ...action.payload, id: nanoid() })
     },
     removeItem(state, action) {
-      console.log("연결됨")
+      return { list: state.list.filter((item) => item.id !== action.payload) }
     },
     searchTermChange(state, action) {
-      console.log("연결됨")
+      state.searchTerm = action.payload
     },
   },
 })
