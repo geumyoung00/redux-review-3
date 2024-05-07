@@ -4,9 +4,9 @@ import { addItem } from "../store/slieces/productSlice"
 
 export const ProductForm = () => {
   const dispatch = useDispatch()
-
-  const name = useSelector((state) => state.form.name)
-  const cost = useSelector((state) => state.form.cost)
+  const { name, cost } = useSelector((state) => state.form)
+  // const name = useSelector((state) => state.form.name)
+  // const cost = useSelector((state) => state.form.cost)
 
   const handleNameChange = (e) => dispatch(nameChange(e.target.value))
 

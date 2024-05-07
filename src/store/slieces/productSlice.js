@@ -5,8 +5,6 @@ const productSlice = createSlice({
   initialState: { list: [], searchTerm: "" },
   reducers: {
     addItem(state, action) {
-      //action.payload = {name: '양말', cost : 12,}
-      // ...action.payload, id: nanoId();
       state.list.push({ ...action.payload, id: nanoid() })
     },
     removeItem(state, action) {
@@ -18,5 +16,5 @@ const productSlice = createSlice({
   },
 })
 
-export default productSlice
 export const { addItem, removeItem, searchTermChange } = productSlice.actions
+export const productReducer = productSlice.reducer

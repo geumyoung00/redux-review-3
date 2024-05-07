@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit"
-import formSlice, { nameChange, costChange } from "./slieces/formSlice"
-import productSlice, {
+import { formReducer, nameChange, costChange } from "./slieces/formSlice"
+import {
+  productReducer,
   addItem,
   removeItem,
   searchTermChange,
@@ -8,16 +9,9 @@ import productSlice, {
 
 export const store = configureStore({
   reducer: {
-    form: formSlice.reducer,
-    product: productSlice.reducer,
+    form: formReducer,
+    product: productReducer,
   },
 })
 
-export {
-  formSlice,
-  nameChange,
-  costChange,
-  addItem,
-  removeItem,
-  searchTermChange,
-}
+export { nameChange, costChange, addItem, removeItem, searchTermChange }
