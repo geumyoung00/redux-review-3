@@ -3,7 +3,6 @@ import { searchTermChange } from "../store"
 
 export const ProductSearch = () => {
   const dispatch = useDispatch()
-
   const handleChange = (e) => dispatch(searchTermChange(e.target.value))
 
   return (

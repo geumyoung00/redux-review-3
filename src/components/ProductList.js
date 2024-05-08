@@ -6,19 +6,20 @@ export const ProductList = () => {
 
   // const list = [{ id: 123, name: "양말", cost: 13 }]
   const { list, searchTerm } = useSelector((state) => state.product)
-  // const filterList = list.filter((item) => item.name.includes(searchTerm))
+  const { name } = useSelector((state) => state.form)
+  const filterList = list.filter((item) => item.name.includes(searchTerm))
 
-  const handleRemove = (id) => dispatch(removeItem(id))
+  const handleRemove = (product) => dispatch(removeItem(product.id))
 
-  const renderedList = list.map((product) => {
-    const bold = product.name.includes(searchTerm)
+  const renderedList = filterList.map((product) => {
+    const bold = product.name.includes(name) && name
     return (
       <div key={product.id} className={`panel ${bold ? "bold" : ""}`}>
         <p>
           {product.name} - ${product.cost}
         </p>
         <button
-          onClick={() => handleRemove(product.id)}
+          onClick={() => handleRemove(product)}
           className="button is-danger is-light"
         >
           삭제

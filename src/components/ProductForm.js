@@ -9,7 +9,6 @@ export const ProductForm = () => {
   // const cost = useSelector((state) => state.form.cost)
 
   const handleNameChange = (e) => dispatch(nameChange(e.target.value))
-
   const handleCostChange = (e) => dispatch(costChange(e.target.value))
 
   const handleSubmit = (e) => {
